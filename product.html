@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Curso de Sistemas Operativos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .container {
+            margin-bottom: 60px;
+        }
+        .course-content {
+            margin-top: 20px;
+        }
+        .course-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .course-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-content ul li {
+            background: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Detalles del Curso</h1>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 id="course-title">Curso Avanzado de Linux</h2>
+                <img id="course-image" src="img/linux.jpg" class="img-fluid" alt="Curso de Linux">
+                <p id="course-description" class="mt-4">En este curso avanzado de Linux, aprenderás técnicas de administración de sistemas, incluyendo el uso de la línea de comandos, scripting avanzado, gestión de redes y servicios, y estrategias de seguridad. Ideal para profesionales que desean profundizar sus conocimientos en entornos de servidor y nube.</p>
+                <div id="course-content" class="course-content">
+                    <h3>Contenido del Curso:</h3>
+                    <ul>
+                        <li>Introducción a la administración avanzada de Linux</li>
+                        <li>Gestión avanzada de usuarios y permisos</li>
+                        <li>Configuración y administración de redes</li>
+                        <li>Scripting avanzado en Bash</li>
+                        <li>Optimización y monitorización del rendimiento del sistema</li>
+                        <li>Seguridad en sistemas Linux</li>
+                        <li>Automatización de tareas y gestión de servicios</li>
+                    </ul>
+                    <h3>Ventajas de Aprender Linux:</h3>
+                    <ul>
+                        <li>Alta demanda laboral para administradores de sistemas Linux</li>
+                        <li>Flexibilidad y personalización del sistema operativo</li>
+                        <li>Mejor comprensión de la infraestructura de servidores</li>
+                        <li>Ampliación de habilidades en entornos de nube y DevOps</li>
+                        <li>Capacidad para gestionar grandes infraestructuras de manera eficiente</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3>$64.99</h3>
+                <button class="btn btn-success btn-lg">Comprar Curso</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plataforma de Cursos de Sistemas Operativos</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const course = params.get('course');
+
+            if (course) {
+                let courseData = {};
+
+                if (course === 'linux') {
+                    courseData = {
+                        title: 'Curso Avanzado de Linux',
+                        image: 'img/linux.jpg',
+                        description: 'En este curso avanzado de Linux, aprenderás técnicas de administración de sistemas, incluyendo el uso de la línea de comandos, scripting avanzado, gestión de redes y servicios, y estrategias de seguridad. Ideal para profesionales que desean profundizar sus conocimientos en entornos de servidor y nube.',
+                        content: [
+                            'Introducción a la administración avanzada de Linux',
+                            'Gestión avanzada de usuarios y permisos',
+                            'Configuración y administración de redes',
+                            'Scripting avanzado en Bash',
+                            'Optimización y monitorización del rendimiento del sistema',
+                            'Seguridad en sistemas Linux',
+                            'Automatización de tareas y gestión de servicios'
+                        ],
+                        advantages: [
+                            'Alta demanda laboral para administradores de sistemas Linux',
+                            'Flexibilidad y personalización del sistema operativo',
+                            'Mejor comprensión de la infraestructura de servidores',
+                            'Ampliación de habilidades en entornos de nube y DevOps',
+                            'Capacidad para gestionar grandes infraestructuras de manera eficiente'
+                        ]
+                    };
+                } else if (course === 'windows') {
+                    courseData = {
+                        title: 'Curso Avanzado de Windows',
+                        image: 'img/windows.jpg',
+                        description: 'Este curso avanzado de Windows cubre la administración y optimización de entornos Windows en redes empresariales. Aprenderás sobre la configuración de políticas de grupo, administración de usuarios y permisos, seguridad avanzada y resolución de problemas. Es perfecto para administradores de sistemas y profesionales de TI.',
+                        content: [
+                            'Introducción a la administración avanzada de Windows',
+                            'Gestión de políticas de grupo y administración de usuarios',
+                            'Configuración y administración de redes',
+                            'Optimización y monitorización del rendimiento del sistema',
+                            'Seguridad en sistemas Windows',
+                            'Resolución de problemas avanzados',
+                            'Automatización de tareas y gestión de servicios'
+                        ],
+                        advantages: [
+                            'Alta demanda laboral para administradores de sistemas Windows',
+                            'Amplia compatibilidad con software empresarial',
+                            'Facilidad de uso y administración en entornos corporativos',
+                            'Mejor comprensión de la infraestructura de redes empresariales',
+                            'Capacidad para gestionar y optimizar entornos de trabajo de manera eficiente'
+                        ]
+                    };
+                } else if (course === 'macos') {
+                    courseData = {
+                        title: 'Curso Avanzado de macOS',
+                        image: 'img/macos.jpg',
+                        description: 'El curso avanzado de macOS está diseñado para usuarios profesionales que buscan dominar el ecosistema de Apple. Se abordan temas como la administración de dispositivos, implementación de políticas de seguridad, optimización del rendimiento del sistema y resolución de problemas avanzados. Ideal para administradores de TI y entusiastas de macOS.',
+                        content: [
+                            'Introducción a la administración avanzada de macOS',
+                            'Gestión de dispositivos y usuarios',
+                            'Configuración y administración de redes',
+                            'Optimización y monitorización del rendimiento del sistema',
+                            'Seguridad en sistemas macOS',
+                            'Resolución de problemas avanzados',
+                            'Automatización de tareas y gestión de servicios'
+                        ],
+                        advantages: [
+                            'Alta demanda laboral para administradores de sistemas macOS',
+                            'Integración fluida con otros productos de Apple',
+                            'Mejor comprensión del ecosistema de Apple',
+                            'Ampliación de habilidades en entornos creativos y de diseño',
+                            'Capacidad para gestionar y optimizar entornos de trabajo de manera eficiente'
+                        ]
+                    };
+                }
+
+                document.getElementById('course-title').innerText = courseData.title;
+                document.getElementById('course-image').src = courseData.image;
+                document.getElementById('course-description').innerText = courseData.description;
+                
+                const contentList = document.getElementById('course-content').querySelector('ul');
+                contentList.innerHTML = '';
+                courseData.content.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerText = item;
+                    contentList.appendChild(li);
+                });
+
+                const advantagesList = document.createElement('ul');
+                courseData.advantages.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerText = item;
+                    advantagesList.appendChild(li);
+                });
+
+                const courseContent = document.getElementById('course-content');
+                courseContent.appendChild(document.createElement('h3')).innerText = 'Ventajas de Aprender para el hambito laboral';
+                courseContent.appendChild(advantagesList);
+            }
+        });
+    </script>
+</body>
+</html>
